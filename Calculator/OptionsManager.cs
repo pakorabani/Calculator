@@ -30,6 +30,10 @@ namespace Calculator
         {
             return $"{a} + {b} = {a + b}";
         }
+        public static string Subtract(double a, double b)
+        {
+            return $"{a} - {b} = {a - b}";
+        }
 
         public static string Divide(double a, double b)
         {
