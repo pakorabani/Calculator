@@ -24,6 +24,7 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void MultiplyShouldMultiplyAAndB()
         {
@@ -37,8 +38,11 @@ namespace Calculator.Tests
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
+        }
+
         [Test]
         public void SubstractShouldSubtractsAAndB()
+
         {
             //Arrange
             double a = 25;
@@ -47,6 +51,8 @@ namespace Calculator.Tests
 
             //Act
             string actualResult = OptionsManager.Subtract(a, b);
+        }
+
         [Test]
         public void DivideShouldDivideAndB()
         {
@@ -60,7 +66,8 @@ namespace Calculator.Tests
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
-        }        
+        }
+
         [Test]
         public void DivideShouldntDivideZero()
         {
@@ -72,7 +79,7 @@ namespace Calculator.Tests
             //Act
             var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Divide(a, b));
             //Assert
-            Assert.AreEqual(expectedResult,ex.Message);
+            Assert.AreEqual(expectedResult, ex.Message);
         }
     }
 }
