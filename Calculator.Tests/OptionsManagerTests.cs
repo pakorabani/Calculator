@@ -23,6 +23,7 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
         public void AddShouldSubtractsAAndB()
         {
             //Arrange
