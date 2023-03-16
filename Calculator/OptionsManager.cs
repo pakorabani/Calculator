@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-  public static  class OptionsManager
+    public static class OptionsManager
     {
-        public static string[] OptionsList = {
+        public static string[] OptionsList =
+        {
             "ex - Exit",
             "a - Add",
             "s - Subtract",
@@ -23,14 +24,36 @@ namespace Calculator
             "avg - Average",
             "sqrt - SumSquareRoots",
             "sq - SumSquares"
-            };
+        };
 
         public static string Add(double a, double b)
         {
             return $"{a} + {b} = {a + b}";
         }
+        public static string Multiply(double a, double b)
+        {
+            return $"{a} * {b} = {a * b}";
+        }
+        public static string Subtract(double a, double b)
+        {
+            return $"{a} - {b} = {a - b}";
+        }
 
+        public static string Divide(double a, double b)
+        {
+            if (b != 0)
+            {
+                 return $"{a} / {b} = {a / b}";
+            }
+            else
+            {
+                throw new InvalidOperationException("Not Divisible by zero");
+            }
+        }
         
-        
+        public static string SubstractAbs(double a, double b)
+        {
+            return $"|{a} - {b}| = {Math.Abs(a - b)}";
+        }
     }
 }
