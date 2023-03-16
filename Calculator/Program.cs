@@ -40,8 +40,12 @@ namespace Calculator
                         case "s":
                             Console.WriteLine(OptionsManager.Subtract(a, b));
                             break;
-
-
+                        case "d":
+                            Console.WriteLine(OptionsManager.Divide(a, b));
+                            break;
+                        case "sabs":
+                            Console.WriteLine(OptionsManager.SubstractAbs(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
