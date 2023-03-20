@@ -128,22 +128,25 @@ namespace Calculator.Tests
             //Arrange
             double a = 1;
             double b = -23;
-            string expectedResult = "Max (1,-23) = -23";
+            string expectedResult = "Min (1,-23) = -23";
             //Act
-            string actualResult = OptionsManager.Add(a, b);
+            string actualResult = OptionsManager.Minimum(a, b);
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void FindsMaximum()
         {
             //Arrange
             double a = 1;
             double b = -23;
-            string expectedResult = "Min (1,-23) = 1";
+            string expectedResult = "Max (1,-23) = 1";
             //Act
-            string actualResult = OptionsManager.Add(a, b);
-            [Test]
+            string actualResult = OptionsManager.Maximum(a, b);
+        }
+
+        [Test]
         public void SQshouldAddAandB()
         {
             //Arrange

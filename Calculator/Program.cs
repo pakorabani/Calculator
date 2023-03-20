@@ -63,6 +63,12 @@ namespace Calculator
                         case "sq":
                             Console.WriteLine(OptionsManager.SumSquares(a, b));
                             break;
+                        case "min":
+                            Console.WriteLine(OptionsManager.Minimum(a, b));
+                            break;
+                        case "max":
+                            Console.WriteLine(OptionsManager.Maximum(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)

@@ -71,12 +71,14 @@ namespace Calculator
         }
         public static string Minimum(double a, double b)
         {
-            return $"Min ({ a},{b }) = {Math.Min(a,b)}";
+            return $"Min ({a},{b}) = {Math.Min(a,b)}";
         }
+
         public static string Maximum(double a, double b)
         {
-            return $"Max ({ a},{b }) = {Math.Max(a,b)}";
-        
+            return $"Max ({a},{b}) = {Math.Max(a, b)}";
+        }
+
         public static string SumSquareRoots(double a, double b)
         {
             if (a > 0 || b > 0)
