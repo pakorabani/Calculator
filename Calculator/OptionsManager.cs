@@ -55,5 +55,13 @@ namespace Calculator
         {
             return $"|{a} - {b}| = {Math.Abs(a - b)}";
         }
+        public static string Minimum(double a, double b)
+        {
+            return $"Min ({ a},{b }) = {Math.Min(a,b)}";
+        }
+        public static string Maximum(double a, double b)
+        {
+            return $"Max ({ a},{b }) = {Math.Max(a,b)}";
+        }
     }
 }
