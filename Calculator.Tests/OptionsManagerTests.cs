@@ -67,19 +67,33 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-
         [Test]
-        public void DivideShouldntDivideZero()
+        public void DevideReminderShouldDevideAAndB()
         {
             //Arrange
             double a = 2;
-            double b = 0;
-            string expectedResult = "Not Divisible by zero";
+            double b = 3;
+            string expectedResult = "2 % 3 = 2";
 
             //Act
-            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Divide(a, b));
+            string actualResult = OptionsManager.DevideReminder(a, b);
+
             //Assert
-            Assert.AreEqual(expectedResult, ex.Message);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void PowerShouldReturnCorrectValuesForAAndB()
+        {
+            //Arrange
+            double a = 2;
+            double b = 3;
+            string expectedResult = "2 ^ 3 = 8";
+
+            //Act
+            string actualResult = OptionsManager.Power(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
         [Test]
         public void SQRTshouldAddPositives()
