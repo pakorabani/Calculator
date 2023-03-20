@@ -49,6 +49,12 @@ namespace Calculator
                         case "sabs":
                             Console.WriteLine(OptionsManager.SubstractAbs(a, b));
                             break;
+                        case "sqrt":
+                            Console.WriteLine(OptionsManager.SumSquareRoots(a, b));
+                            break;
+                        case "sq":
+                            Console.WriteLine(OptionsManager.SumSquares(a, b));
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
