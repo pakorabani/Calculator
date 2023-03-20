@@ -40,6 +40,12 @@ namespace Calculator
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
+                        case "dr":
+                            Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            break;
+                        case "pow":
+                            Console.WriteLine(OptionsManager.Power(a, b));
+                            break;
 
                     }
                 }

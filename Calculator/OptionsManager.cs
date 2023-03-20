@@ -33,8 +33,18 @@ namespace Calculator
         {
             return $"{a} * {b} = {a * b}";
         }
-
-
+        public static string DevideReminder(double a, double b)
+        {
+            if (b==0)
+            {
+                throw new ArgumentException("Is not divisible by zero");
+            }
+            return $"{a} % {b} = {a % b}";
+        }
+        public static string Power(double a, double b)
+        {
+            return $"{a} ^ {b} = {Math.Pow(a,b)}";
+        }
 
 
     }
