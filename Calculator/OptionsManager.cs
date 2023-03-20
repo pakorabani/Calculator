@@ -55,5 +55,22 @@ namespace Calculator
         {
             return $"|{a} - {b}| = {Math.Abs(a - b)}";
         }
+        
+        public static string SumSquareRoots(double a, double b)
+        {
+            if (a > 0 || b > 0)
+            {
+                return $"Square root of {a} + square root of {b} = {Math.Sqrt(a)+Math.Sqrt(b)}";
+            }
+            else
+            {
+                throw new InvalidOperationException("The numbers must be positive or 0");
+            }
+        }
+        
+        public static string SumSquares(double a, double b)
+        {   
+            return $"{a}^2 + {b}^2 = {Math.Pow(a,2)+ Math.Pow(b,2)}";
+        }
     }
 }

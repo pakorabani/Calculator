@@ -81,5 +81,46 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, ex.Message);
         }
+        [Test]
+        public void SQRTshouldAddPositives()
+        {
+            //Arrange
+            double a = 4;
+            double b = 4;
+            string expectedResult = "Square root of 4 + square root of 4 = 4";
+
+            //Act
+            string actualResult = OptionsManager.SumSquareRoots(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void SQRTshouldntAddNegatives()
+        {
+            //Arrange
+            double a = -4;
+            double b = -4;
+            string expectedResult = "The numbers must be positive or 0";
+
+            //Act
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.SumSquareRoots(a, b));
+            //Assert
+            Assert.AreEqual(expectedResult, ex.Message);
+        }
+        [Test]
+        public void SQshouldAddAandB()
+        {
+            //Arrange
+            double a = 4;
+            double b = 4;
+            string expectedResult = "4^2 + 4^2 = 32";
+
+            //Act
+            string actualResult = OptionsManager.SumSquares(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
