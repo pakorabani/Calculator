@@ -123,6 +123,27 @@ namespace Calculator.Tests
             Assert.AreEqual(expectedResult, ex.Message);
         }
         [Test]
+        public void FindsMinimum()
+        {
+            //Arrange
+            double a = 1;
+            double b = -23;
+            string expectedResult = "Max (1,-23) = -23";
+            //Act
+            string actualResult = OptionsManager.Add(a, b);
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void FindsMaximum()
+        {
+            //Arrange
+            double a = 1;
+            double b = -23;
+            string expectedResult = "Min (1,-23) = 1";
+            //Act
+            string actualResult = OptionsManager.Add(a, b);
+            [Test]
         public void SQshouldAddAandB()
         {
             //Arrange
