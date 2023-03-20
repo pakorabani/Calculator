@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace Calculator.Tests
@@ -23,6 +24,7 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [Test]
         public void MultiplyShouldMultiplyAAndB()
         {
@@ -33,6 +35,34 @@ namespace Calculator.Tests
 
             //Act
             string actualResult = OptionsManager.Multiply(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void SubstractShouldSubtractsAAndB()
+
+        {
+            //Arrange
+            double a = 25;
+            double b = 2;
+            string expectedResult = "25 - 2 = 23";
+
+            //Act
+            string actualResult = OptionsManager.Subtract(a, b);
+        }
+
+        [Test]
+        public void DivideShouldDivideAndB()
+        {
+            //Arrange
+            double a = 10;
+            double b = 2;
+            string expectedResult = "10 / 2 = 5";
+
+            //Act
+            string actualResult = OptionsManager.Divide(a, b);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
