@@ -38,7 +38,7 @@ namespace Calculator
         {
             if (b==0)
             {
-                throw new ArgumentException("Is not divisible by zero");
+                throw new InvalidOperationException("Is not divisible by zero");
             }
             return $"{a} % {b} = {a % b}";
         }

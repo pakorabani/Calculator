@@ -42,6 +42,7 @@ namespace Calculator
                             break;
                         case "dr":
                             Console.WriteLine(OptionsManager.DevideReminder(a, b));
+                            
                             break;
                         case "pow":
                             Console.WriteLine(OptionsManager.Power(a, b));
