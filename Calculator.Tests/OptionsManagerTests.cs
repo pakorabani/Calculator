@@ -67,17 +67,58 @@ namespace Calculator.Tests
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-
         [Test]
-        public void DivideShouldntDivideZero()
+        public void DevideReminderShouldDevideAAndB()
         {
             //Arrange
             double a = 2;
-            double b = 0;
-            string expectedResult = "Not Divisible by zero";
+            double b = 3;
+            string expectedResult = "2 % 3 = 2";
 
             //Act
-            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.Divide(a, b));
+            string actualResult = OptionsManager.DevideReminder(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void PowerShouldReturnCorrectValuesForAAndB()
+        {
+            //Arrange
+            double a = 2;
+            double b = 3;
+            string expectedResult = "2 ^ 3 = 8";
+
+            //Act
+            string actualResult = OptionsManager.Power(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void SQRTshouldAddPositives()
+        {
+            //Arrange
+            double a = 4;
+            double b = 4;
+            string expectedResult = "Square root of 4 + square root of 4 = 4";
+
+            //Act
+            string actualResult = OptionsManager.SumSquareRoots(a, b);
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void SQRTshouldntAddNegatives()
+        {
+            //Arrange
+            double a = -4;
+            double b = -4;
+            string expectedResult = "The numbers must be positive or 0";
+
+            //Act
+            var ex = Assert.Throws<InvalidOperationException>(() => OptionsManager.SumSquareRoots(a, b));
             //Assert
             Assert.AreEqual(expectedResult, ex.Message);
         }
@@ -102,6 +143,17 @@ namespace Calculator.Tests
             string expectedResult = "Min (1,-23) = 1";
             //Act
             string actualResult = OptionsManager.Add(a, b);
+            [Test]
+        public void SQshouldAddAandB()
+        {
+            //Arrange
+            double a = 4;
+            double b = 4;
+            string expectedResult = "4^2 + 4^2 = 32";
+
+            //Act
+            string actualResult = OptionsManager.SumSquares(a, b);
+
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
